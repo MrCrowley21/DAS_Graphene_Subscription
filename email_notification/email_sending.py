@@ -18,13 +18,13 @@ class EmailManipulator:
             # Use TLS to add security
             smtp.starttls()
             # User Authentication
-            smtp.login("sender_mail", "app_password")
-            sender = "sender_mail"
+            smtp.login("sender_email", "app_password")
+            sender = "sender_email"
             receiver = receiver_email
             msg = MIMEMultipart('alternative')
             # Defining The Subject
             msg['Subject'] = "We are glad to welcome you!"
-            msg['From'] = formataddr(('Lost&Found Team', 'sender_mail'))
+            msg['From'] = formataddr(('Lost&Found Team', 'sender_email'))
             # Defining The Message
             date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")  # date
             # Defining email text
